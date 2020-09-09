@@ -1,0 +1,39 @@
+.container {
+    height: 20rem;
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column;
+}
+
+.ticket {
+    border-bottom: 1px solid rgb(68, 68, 68);
+    margin-bottom: 1rem;
+    flex-direction: column;
+}
+
+.descStyle {
+    display: flex;
+    flex-direction: column;
+}
+
+.delBtn {
+    align-self: top;
+    height: 30px;
+    padding: 0;
+    background: none;
+    color: rgb(63, 63, 63);
+    border: none;
+
+}
+
+.delBtn:focus {
+    border: none;
+    background: none;
+}
+
+
+.delBtn:hover {
+    color: black;
+    border: none;
+    background: none;
+}
