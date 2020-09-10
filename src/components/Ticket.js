@@ -4,16 +4,18 @@ import { Container, Button } from 'react-bootstrap';
 import { ticket, descStyle, delBtn } from './Ticket.module.css';
 
 
-export default function Ticket({ desc, devAssigned, priority, _id, getData }) {
+export default function Ticket({ desc, devAssigned, priority, id, getData }) {
 
     const [dis, setDis] = useState('flex');
 
     const deleteTicket = async () => {
-        setDis('none');
+
+        console.log(id);
+
 
         try {
-            await axios.delete('/delete-ticket', { id: _id });
-            getData()
+            await axios.post(`/delete-ticket/${id}?_method=DELETE`);
+            setDis('none');
 
         } catch (e) {
             console.log(e);
