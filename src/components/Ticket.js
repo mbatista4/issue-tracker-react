@@ -10,8 +10,6 @@ export default function Ticket({ desc, devAssigned, priority, id, getData }) {
 
     const deleteTicket = async () => {
 
-        console.log(id);
-
 
         try {
             await axios.post(`/delete-ticket/${id}?_method=DELETE`);

@@ -14,9 +14,6 @@ export default function TicketForm({ isDisabled }) {
 
     const addTicket = async (e) => {
         e.preventDefault();
-
-        console.log(e.target.desc.value);
-
         let {
             desc,
             devAssigned,
