@@ -7,9 +7,9 @@ import { container } from './Form.module.css';
 
 
 
-export default function TicketForm({ isDisabled }) {
+export default function TicketForm({ isDisabled, viewTickets }) {
 
-    const API = '/create-ticket';
+    const API = 'https://issue-tracker-back.herokuapp.com/create-ticket';
 
 
     const addTicket = async (e) => {
@@ -24,7 +24,7 @@ export default function TicketForm({ isDisabled }) {
 
         try {
             await Axios.post(API, newTicket);
-
+            viewTickets();
         } catch (e) {
             console.log(e);
         }

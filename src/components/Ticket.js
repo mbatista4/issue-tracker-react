@@ -10,9 +10,8 @@ export default function Ticket({ desc, devAssigned, priority, id, getData }) {
 
     const deleteTicket = async () => {
 
-
         try {
-            await axios.post(`/delete-ticket/${id}?_method=DELETE`);
+            await axios.post(`https://issue-tracker-back.herokuapp.com/delete-ticket/${id}?_method=DELETE`);
             setDis('none');
 
         } catch (e) {
